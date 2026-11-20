@@ -19,6 +19,24 @@ model, and reasoning level.
 - Settings → Plugins → Model Favorites lists saved favorites and can remove
   them.
 
+## Screenshots
+
+The **Favorites** tab, opened on a composer that has no model yet. Each starred
+model shows its provider icon and saved reasoning level, and the model already
+in the composer comes first.
+
+![Favorites tab in the model picker](screenshots/favorites-tab.jpg)
+
+Stars in the native model list. The search box filters starred and unstarred
+rows the same way.
+
+![Stars on model rows in the picker](screenshots/stars-in-picker.jpg)
+
+Settings → Plugins → Model Favorites: the auto-open toggle and the saved
+favorites with their Remove buttons.
+
+![Model Favorites settings page](screenshots/settings.jpg)
+
 ## How it works
 
 - `server.ts` — stores favorites in `bb.storage.kv`, reads provider catalogs
