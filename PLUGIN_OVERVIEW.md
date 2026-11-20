@@ -1,36 +1,42 @@
-# Model Favorites
+Stars sit on every model row in BB's desktop picker, so a favorite takes one
+click to save and one click to remove. A saved favorite keeps all three parts
+of the choice: the provider, the model, and the reasoning level.
 
-Star the models you actually use and reach them from one tab in BB's model
-picker.
+## What you get
 
-Open the model picker in any composer and star a model row. The star stores the
-provider, the model, and the reasoning level that is currently selected. A new
-**Favorites** tab appears beside the provider tabs and lists every starred
-model with its provider icon and reasoning level. If a composer has no model
-selected yet, the picker opens on the Favorites tab instead of a provider list.
+- A **Favorites** tab beside the provider tabs. Each row shows the provider
+  icon, the model name, and the saved reasoning level.
+- The model already selected in the composer is listed first, so the row you
+  are most likely to want is at the top.
+- A filled star marks rows that are already favorites. Click it again to
+  remove the favorite.
+- Picking a favorite applies the whole combination and closes the picker.
+- The search box filters the Favorites list together with the native model
+  list.
+- The tab opens by itself when a composer has no model selected yet. Turn this
+  off in the plugin settings if you prefer to start on the provider list.
+- Settings → Plugins → Model Favorites lists saved favorites and can remove
+  them.
 
-Picking a favorite applies the whole saved combination through the composer's
-own selection API. The composer keeps BB's normal display, the provider icon
-and the model name, and its model, reasoning, and provider tabs stay in sync.
+## How it works
 
-## Behavior
+The plugin is a display adapter over BB's own picker. It reads the provider
+tabs, model rows, and search box from the page, and it leaves the native menu
+untouched when a row cannot be matched unambiguously.
 
-- **Star any model** in the active provider list. A starred row shows a filled
-  star; click it again to remove the favorite.
-- **Favorites tab** shows provider icon, model name, and reasoning level. The
-  model already selected in the composer is listed first.
-- **Pick and go**: choosing a favorite applies it and closes the picker.
-- **Search** filters the Favorites list as well as the native model list.
-- **Auto-open** when the composer has no model yet; disable it in the plugin
-  settings if you prefer to start on the provider list.
-- **Settings page** lists saved favorites and can remove them.
-
-## Notes
-
-The plugin is a display adapter over BB's picker. It reads the provider tabs,
-model rows, and the search box, and it leaves the native menu untouched when it
-cannot match a row unambiguously. It works in the desktop picker; the compact
-and mobile pickers keep their native behavior.
+A pick applies provider, model, and reasoning through the composer's own
+selection API, so the composer keeps BB's normal display: provider icon and
+model name. If the composer rejects the value, the adapter falls back to
+clicking the host's own tabs and rows.
 
 Favorites are stored on the BB server, so every window and machine connected to
 the same server sees the same list.
+
+## Requirements
+
+- The desktop picker. The compact and mobile pickers keep their native
+  behavior.
+- Stars appear on the main model list, not inside the nested "More models"
+  submenu; rows there still work natively.
+- A change to BB's picker layout can disable the adapter until it is updated.
+  It never guesses when labels or markers are ambiguous.

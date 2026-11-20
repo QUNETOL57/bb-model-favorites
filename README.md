@@ -76,3 +76,7 @@ npx tsc --noEmit
   submenu (native rows there still work).
 - A BB picker layout change can disable the adapter until it is updated; it
   never guesses when labels or markers are ambiguous.
+
+## License
+
+MIT

@@ -3,6 +3,23 @@
   "version": "0.1.0",
   "description": "Star models in BB's model picker and keep them in a Favorites tab with their provider and reasoning level.",
   "type": "module",
+  "license": "MIT",
+  "author": "QUNETOL57",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QUNETOL57/bb-model-favorites.git"
+  },
+  "homepage": "https://github.com/QUNETOL57/bb-model-favorites#readme",
+  "bugs": {
+    "url": "https://github.com/QUNETOL57/bb-model-favorites/issues"
+  },
+  "keywords": [
+    "bb-plugin",
+    "bb",
+    "model-picker",
+    "favorites",
+    "reasoning"
+  ],
   "engines": {
     "bb": ">=0.50",
     "bbPluginSdk": ">=0.6.157"
@@ -29,7 +46,6 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "better-sqlite3": "^13.2.0",
-    "cron-parser": "^5.10.6",
     "hono": "^4.13.19",
     "jsdom": "^26.1.0",
     "react": "^19.0.0",
